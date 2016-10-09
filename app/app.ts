@@ -1,2 +1,1 @@
-import * from 'jQuery';
-
+import 'jquery';
