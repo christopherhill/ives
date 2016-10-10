@@ -5,15 +5,15 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
 
   devtool: 'inline-source-map',
-  // entry: {
-  //   polyfills: './app/polyfills.ts',
-  //   vendor: './app/vendor.ts',
-  //   app: './app/app.ts',
-  // },
-  // output: {
-  //   path: path.resolve(__dirname, 'dist'),
-  //   filename: '[name].bundle.js'
-  // },
+  entry: {
+    polyfills: './app/polyfills.ts',
+    vendor: './app/vendor.ts',
+    app: './app/app.ts',
+  },
+  output: {
+    path: path.resolve(__dirname, 'dist'),
+    filename: '[name].bundle.js'
+  },
   resolve: {
     modules: [
       path.resolve(__dirname, 'app'),
