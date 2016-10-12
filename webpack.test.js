@@ -2,13 +2,12 @@ var path = require('path');
 var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
+// disable common chunks plugin during testing to prevent problems
 module.exports = {
 
   devtool: 'inline-source-map',
   entry: {
-    polyfills: './app/polyfills.ts',
-    vendor: './app/vendor.ts',
-    app: './app/app.ts',
+    app: './app/app.ts'
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -52,9 +51,6 @@ module.exports = {
     ]
   },
   plugins: [
-    new webpack.optimize.CommonsChunkPlugin({
-      name: ['app', 'vendor', 'polyfills']
-    }),
     new HtmlWebpackPlugin({
       template: 'app/index.html'
     })
