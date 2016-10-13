@@ -7,14 +7,10 @@ module.exports = function (config) {
     frameworks: ['jasmine'],
 
     files: [
-      // { pattern: /app\/**\/\*spec.ts/, watched: false }
       { pattern: './config/karma.test.js', watched: false }
     ],
 
     preprocessors: {
-      // 'app/polyfills.ts': ['webpack', 'sourcemap']
-      // 'app/vendor.ts': ['webpack', 'sourcemap']
-      // 'app/app.ts': ['webpack', 'sourcemap']
       './config/karma.test.js': ['webpack', 'sourcemap']
     },
 

@@ -8,7 +8,7 @@ module.exports = {
   entry: {
     polyfills: './app/polyfills.ts',
     vendor: './app/vendor.ts',
-    app: './app/app.ts',
+    app: './app/app.bootstrap.ts',
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -52,7 +52,7 @@ module.exports = {
     ]
   },
   plugins: [
-    new webpack.optimize.CommonsChunkPlugin({
+    new webpack.optimize.CommonsChunkPlugin({ls -
       name: ['app', 'vendor', 'polyfills']
     }),
     new HtmlWebpackPlugin({

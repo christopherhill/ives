@@ -7,7 +7,7 @@ module.exports = {
 
   devtool: 'inline-source-map',
   entry: {
-    app: './app/app.ts'
+    app: './app/app.bootstrap.ts'
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
