@@ -1,16 +1,18 @@
 {
   "name": "fluffy",
   "version": "1.0.0",
-  "description": "Baseline for Webpack, Typescript, Angular2",
+  "description": "Baseline for Webpack2, Typescript2, Angular2",
   "main": "index.js",
   "scripts": {
     "prestart": "npm i && npm run lint",
     "build": "set NODE_ENV=production && webpack",
     "start": "set NODE_ENV=development && webpack-dev-server",
     "lint": "find ./app -name '*.ts' | xargs tslint",
-    "ci": "export NODE_ENV=production && find ./app -name '*.ts' | xargs tslint && webpack --progress --colors --config --bail",
+    "ci": "export NODE_ENV=production && npm run lint && webpack --progress --colors --config --bail && npm run test && npm run e2e",
     "size": "webpack --json | webpack-bundle-size-analyzer",
-    "test": "karma start"
+    "test": "karma start",
+    "e2e": "webdriver-manager update && npm run protractor",
+    "protractor": "protractor protractor.conf.js"
   },
   "author": "Christopher Hill",
   "repository": {
