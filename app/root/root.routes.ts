@@ -1,10 +1,12 @@
 import { RootComponent } from './root.component';
 import { Routes, RouterModule } from '@angular/router';
 import { ModuleWithProviders } from '@angular/core';
+import { entityRoutes } from './../entity/entity.routes';
 
-export const RootRoutes = [
-  { path: '', redirectTo: '/auth/main', pathMatch: 'full' },
-  { path: '**', component: RootComponent }
+export const rootRoutes: Routes = [
+  ...entityRoutes,
+  { path: '', component: RootComponent }
+  // { path: '**', component: RootComponent }
 ];
 
-export const routing: ModuleWithProviders = RouterModule.forRoot(RootRoutes);
+export const routing: ModuleWithProviders = RouterModule.forRoot(rootRoutes);

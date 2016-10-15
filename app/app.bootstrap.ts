@@ -7,4 +7,4 @@ if (window.location.hostname.indexOf('localhost') < 0) {
   enableProdMode();
 }
 
-platformBrowserDynamic.bootstrapModule(RootModule);
+export const moduleRef = platformBrowserDynamic().bootstrapModule(RootModule);

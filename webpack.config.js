@@ -35,6 +35,12 @@ module.exports = {
         exclude: /node_modules/
       },
       {
+        test: /\.sass$/,
+        exclude: /node_modules/,
+        // loaders: ['raw-loader', 'css?sourceMap', 'sass?sourceMap']
+        loader: 'style-loader!css-loader!sass-loader'
+      },
+      {
         test: /\.css$/,
         loader: 'raw-loader',
         exclude: /node_modules/
@@ -52,7 +58,7 @@ module.exports = {
     ]
   },
   plugins: [
-    new webpack.optimize.CommonsChunkPlugin({ls -
+    new webpack.optimize.CommonsChunkPlugin({
       name: ['app', 'vendor', 'polyfills']
     }),
     new HtmlWebpackPlugin({

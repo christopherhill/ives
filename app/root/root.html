@@ -1,3 +1,9 @@
 <div>
-  <h2>Root Component</h2>
+  <div class="fluffy-header">
+    <h2>Root Component</h2>
+    <img src="{{logo}}" />
+  </div>
+  <div *ngIf="router.url !== ''">
+    <router-outlet></router-outlet>
+  </div>
 </div>
