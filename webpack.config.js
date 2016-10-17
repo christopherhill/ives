@@ -1,6 +1,7 @@
 var path = require('path');
 var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+var isDevelopment = process.env.NODE_ENV === 'development';
 
 module.exports = {
 
@@ -63,16 +64,20 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       template: 'app/index.html'
-    })
+    }),
+    !isDevelopment ? new webpack.optimize.UglifyJsPlugin({
+      output: {
+        comments: false
+      },
+      compress: {
+        warnings: false
+      },
+      minimize: true,
+      mangle: false
+    }) : null
   ],
   devServer: {
     historyApiFallback: true,
-    // proxy: {
-    //   '*': {
-    //     target: 'http://localhost:3000',
-    //     secure: false
-    //   }
-    // }
   }
 
 };
