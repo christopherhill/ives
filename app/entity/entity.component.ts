@@ -1,6 +1,7 @@
 'use strict';
 
 import { Input, Component, EventEmitter } from '@angular/core';
+var logo = require('./../../assets/logo.svg');
 
 @Component({
   selector: 'entity',
@@ -8,6 +9,8 @@ import { Input, Component, EventEmitter } from '@angular/core';
 })
 
 export class EntityComponent {
+
+  @Input() logo = logo;
 
 	constructor(
 	) {}

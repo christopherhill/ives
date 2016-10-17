@@ -4,6 +4,7 @@
   "description": "Baseline for Webpack2, Typescript2, Angular2",
   "main": "index.js",
   "scripts": {
+    "prestart": "npm i && npm run lint",
     "build": "export NODE_ENV=production && webpack",
     "start": "export NODE_ENV=development & webpack-dev-server",
     "lint": "find ./app -name '*.ts' | xargs tslint",

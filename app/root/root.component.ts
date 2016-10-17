@@ -1,6 +1,5 @@
 'use strict';
 
-var logo = require('./../../assets/logo.svg');
 import { Input, Component, EventEmitter } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { Router } from '@angular/router';
@@ -13,8 +12,6 @@ import { Router } from '@angular/router';
 })
 
 export class RootComponent {
-
-	@Input() logo = logo;
 
 	constructor(
 		private DomSanitizer: DomSanitizer,
