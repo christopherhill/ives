@@ -23,8 +23,8 @@ module.exports = function (config) {
     webpackServer: {
       noInfo: true
     },
-
-    reporters: ['progress'],
+    // Istanbul is 'coverage'
+    reporters: ['coverage', 'progress'],
     port: 9876,
     colors: true,
     logLevel: config.LOG_INFO,
