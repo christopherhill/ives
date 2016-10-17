@@ -25,6 +25,11 @@ module.exports = function (config) {
     },
     // Istanbul is 'coverage'
     reporters: ['coverage', 'progress'],
+    coverageReporter: {
+      type : 'html',
+      dir : 'tests/coverage/'
+    },
+
     port: 9876,
     colors: true,
     logLevel: config.LOG_INFO,
