@@ -4,14 +4,12 @@
   "description": "Baseline for Webpack2, Typescript2, Angular2",
   "main": "index.js",
   "scripts": {
-    "prestart": "npm i && npm run lint",
     "build": "export NODE_ENV=production && webpack",
-    "start": "export NODE_ENV=development && webpack-dev-server",
+    "start": "export NODE_ENV=development & webpack-dev-server",
     "lint": "find ./app -name '*.ts' | xargs tslint",
     "ci": "export NODE_ENV=production && npm run lint && webpack --progress --colors --config --bail && npm run test && npm run e2e",
     "size": "webpack --json | webpack-bundle-size-analyzer",
     "test": "karma start",
-    "e2e": "npm run webdriver:update && npm start & npm run protractor",
     "protractor": "protractor ./config/protractor.conf.js",
     "webdriver:start": "webdriver-manager start",
     "webdriver:update": "webdriver-manager update"
@@ -49,7 +47,7 @@
     "style-loader": "^0.13.1",
     "typescript": "^2.0.3",
     "webpack": "^2.1.0-beta.25",
-    "webpack-dev-server": "^2.1.0-beta.8"
+    "webpack-dev-server": "^2.1.0-beta.9"
   },
   "dependencies": {
     "@angular/common": "^2.0.2",
