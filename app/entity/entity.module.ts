@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { BrowserModule } from '@angular/platform-browser';
-import { routing } from './entity.routes.ts';
+import { routing } from './entity.routes';
 import { EntityComponent } from './entity.component';
 
 @NgModule({

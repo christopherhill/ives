@@ -1,56 +1,17 @@
 'use strict';
 
-var w = window.location.hostname;
-var p = window.location.protocol;
-var t = window.location.port;
+export class APIService {
 
-const HOST_MAP = {
-	base: { local: 'test-ohw.kineticmath.com', production: w },
-	rest: { local: 'test-ohw.kineticmath.com', production: w },
-	login: { local: 'test.kineticmath.com', production: w },
-	order: { local: 'test.kineticbooks.com', production: w },
-	trialTest: { local: 'test-ohw.kineticmath.com', production: w },
-	trial: { local: 'www.kineticmath.com', production: w } //  http://www.kineticmath.com/trial/trialendpt.php/username'}
-};
-
-const URI_MAP = {
-	base: { local: 'rest/endpoint.php/', production: 'api/endpoint/' },
-	rest: { local: 'rest/rest.php/', production: 'api/rest/' },
-	login: { local: 'rest/', production: 'api/login/' },
-	order: { local: 'order/order.php/', production: 'api/order/' },
-	trialTest: { local: 'rest/test_trial/trial/trialendpt.php/', production: 'api/test-trial/' },
-	trial: { local: 'trial/trialendpt.php/', production: 'api/trial/' }
-};
-
-export class APIBase {
-
-	isLocal = false;
-	url = {};
+	isLocal: boolean = false;
+	url: string = '';
+	w: string = window.location.hostname;
+	p: string = window.location.protocol;
+	t: string = window.location.port;
 
 	constructor() {
-		this.init();
-	}
-
-	init() {
-		for (var key in URI_MAP) { this.set(key); }
 	}
 
 	get(type) {
-		return this.url[type];
-	}
-
-	getAll() {
-		var response = {};
-		for (var key in URI_MAP) { response[key] = this.get(key); };
-		return response;
-	}
-
-	set(type) {
-		if (w === 'localhost') {
-			this.url[type] = `${p}//${HOST_MAP[type].local}/${URI_MAP[type].local}`;
-		} else {
-			this.url[type] = `${p}//${HOST_MAP[type].production}/${URI_MAP[type].production}`;
-		}
 		return this.url[type];
 	}
 

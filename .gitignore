@@ -4,3 +4,4 @@ npm-debug.log
 app/*.js
 dist/
 tests/coverage/
+.DS_Store

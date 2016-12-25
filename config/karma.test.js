@@ -11,7 +11,7 @@ require('zone.js/dist/fake-async-test');
 
 // require('./../dist/polyfills.bundle.js');
 
-var appContext = require.context('../app', true, /\.spec\.ts/);
+var appContext = require.context('../tests/specs', true, /\.spec\.ts/);
 appContext.keys().forEach(appContext);
 
 var testing = require('@angular/core/testing');

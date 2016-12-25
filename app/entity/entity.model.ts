@@ -1,6 +1,9 @@
 'use strict';
 
-export class EntityModel extends API {
+import { Injectable } from '@angular/core';
+
+@Injectable()
+export class EntityModel  {
 
   constructor() {}
 
