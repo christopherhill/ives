@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.45/css/bootstrap-datetimepicker-standalone.css"/>
+  </head>
+  <body>
+     <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="#">Ives</a>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="manage.html">Manage</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="programs.html">Programs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="brainstorm.html">Brainstorm</a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="text" placeholder="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+
+    <div class="container">
+      <br>
+      <div class="alert alert-info" role="alert">
+        <strong>Let's build your program!</strong> Click on the fields to enter your program details below. Drag and drop to change the order.
+      </div>
+      <div class="alert alert-warning" role="alert">
+        <strong>Tip: </strong> This program is short. You might want to add an overture. Consider these <a href="">recommendations</a> by Verdi or Rossini. Or click <a href="">here</a> to stop making recommendations.
+      </div>
+      <fieldset>
+        <div class="input-group input-group-lg">
+          <input type="text" class="form-control" placeholder="Program Title" aria-describedby="basic-addon2">
+          <span class="btn input-group-addon" id="basic-addon2">Suggest...</span>
+        </div><br>
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Theme" aria-describedby="basic-addon3">
+          <span class="btn input-group-addon" id="basic-addon3">Suggest...</span>
+        </div><br>
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Venue" aria-describedby="basic-addon3">
+          <button class="btn input-group-addon" id="basic-addon3">Suggest...</button>
+        </div><br>
+      </fieldset>
+    <div class="row">
+        <div class='col-sm-6'>
+            <div class="form-group">
+                <div class='input-group date' id='datetimepicker1'>
+                    <input type='text' class="form-control" />Date
+                    <span class="input-group-addon">
+                        <span class="date">Date</span>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+
+        </script>
+    </div>
+
+      <table class="table">
+        <thead>
+          <th>Work</th>
+          <th>Composer</th>
+          <th>Duration</th>
+          <th>Instrumentation</th>
+          <th>...</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Symphony No. 5</td>
+            <td>Beethoven, Ludwig van</td>
+            <td>60'</td>
+            <td>2222 2200 str</td>
+            <td>
+              <button class="btn btn-sm btn-info">Use Notes</button>
+              <button class="btn btn-sm btn-primary">Assignments</button>
+              <button class="btn btn-sm btn-danger">Delete</button>
+              </td>
+          </tr>
+    
+          <tr>
+            <td colspan="2">
+              <input class="typeahead" type="text" data-provide="typeahead">
+            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+
+            <td><button class="btn btn-sm btn-primary">+ Add a new work to this program</button></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td colspan="5">
+              Ives can make suggestions for you: 
+              <button class="btn btn-sm btn-info">By name</button>
+              <button class="btn btn-sm btn-info">By instrumentation</button>
+              <button class="btn btn-sm btn-info">By duration</button>
+              <button class="btn btn-sm btn-info">By theme</button>
+            </td>
+          </tr>
+        </tbody>
+        </table>
+
+        <button class="btn btn-lg btn-primary">Print Program...</button>
+
+    </div>
+    
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.2/bootstrap3-typeahead.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.45/js/bootstrap-datetimepicker.min.js"></script>
+    <script>
+      let nums = [...Array(10).keys()];
+      let symphonies = nums.map(num => `Symphony No. ${num + 1} | Beethoven, Ludwig van`);
+
+      $('.typeahead').typeahead({ source: symphonies });
+      $(function () {
+        $('#datetimepicker1').datetimepicker();
+      });
+    </script>
+  </body>
+</html>
