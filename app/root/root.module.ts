@@ -8,6 +8,9 @@ import { BrowserModule } from '@angular/platform-browser';
 // import { EntityComponent } from './../entity/entity.component';
 import { RootComponent } from './root.component';
 import { EntityModule } from './../entity/entity.module';
+import { IconNavComponent } from './../icon-nav/icon-nav.component';
+import { ProgramModule } from './../program/program.module';
+import { ManageModule } from './../manage/manage.module';
 
 @NgModule({
     imports: [
@@ -15,10 +18,13 @@ import { EntityModule } from './../entity/entity.module';
       HttpModule,
       BrowserModule,
       EntityModule,
+      ProgramModule,
+      ManageModule,
       routing
     ],
     declarations: [
-      RootComponent
+      RootComponent,
+      IconNavComponent
     ],
     bootstrap: [RootComponent]
 })
