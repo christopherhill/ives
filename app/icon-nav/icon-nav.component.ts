@@ -16,15 +16,12 @@ const links = require('./icon-nav.json');
 export class IconNavComponent {
 
 	@Input() links: Array<Object> = links;
-//	@Output() navigate: Function;
 
 	constructor(
 		private DomSanitizer: DomSanitizer,
 		public router: Router,
 		public activatedRoute: ActivatedRoute
 	) {
-		
-
 	}
 
 	ngOnDestroy() {

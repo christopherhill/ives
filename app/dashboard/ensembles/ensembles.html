@@ -1,0 +1,8 @@
+<div *ngFor="let ensemble of data" class="statcard statcard-primary p-4 mb-2">
+  <span class="statcard-title">{{ensemble.name}}</span>
+  <h3 class="statcard-number">
+    {{ensemble.remainingRehearsals}} rehearsals left
+    <small class="delta-indicator delta-positive">{{ensemble.pulse[ensemble.pulse.length - 1]}}%</small>
+  </h3>
+  <span class="statcard-desc">Schedule</span>
+</div>

@@ -13,6 +13,7 @@ import { ProgramModule } from './../program/program.module';
 import { ManageModule } from './../manage/manage.module';
 import { DashboardModule } from './../dashboard/dashboard.module';
 import { CommonModule } from '@angular/common';
+import { PersonnelModule } from './../personnel/personnel.module';
 
 @NgModule({
     imports: [
@@ -24,6 +25,7 @@ import { CommonModule } from '@angular/common';
       ProgramModule,
       ManageModule,
       DashboardModule,
+      PersonnelModule,
       routing
     ],
     declarations: [

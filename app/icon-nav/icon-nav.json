@@ -12,4 +12,10 @@
     "name": "Program",
     "route": "program",
     "icon": "icon-pencil"
-}]
+},
+{
+    "name": "Personnel",
+    "route": "personnel",
+    "icon": "icon-user"
+}
+]

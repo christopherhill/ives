@@ -1,0 +1,38 @@
+<br>
+<h2>Personnel</h2>
+<table class="table">
+  <thead>
+    <th>First</th>
+    <th>Last</th>
+    <th>Instrument</th>
+    <th>Email</th>
+    <th>...</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let member of data">
+      <td>{{member.firstName}}</td>
+      <td>{{member.lastName}}</td>
+      <td>{{member.instrument}}</td>
+      <td>{{member.email}}</td>
+      <td>
+        <div class="dropdown">
+          <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Actions
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#">Email...</a>
+            <a class="dropdown-item" href="programs.html">Program Manager...</a>
+            <a class="dropdown-item" href="#">Rehearsal Schedule...</a>
+            <a class="dropdown-item" href="#">Personnel Assignments...</a>
+            <a class="dropdown-item" href="#">Share and Promote...</a>
+          </div>
+        <button class="btn btn-danger">Delete</button>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td><button class="btn btn-primary">+ Add a new performance in this series</button></td>
+    </tr>
+  </tbody>
+</table>
+      

@@ -1,5 +1,6 @@
+var $ = require('jquery');
 
-n () {
+(function () {
 
   var Charts = {
 

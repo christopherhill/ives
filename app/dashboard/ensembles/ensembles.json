@@ -1,0 +1,14 @@
+[{
+  "name": "University Orchestra",
+  "conductor": "Osmo Vanska",
+  "members": "80",
+  "remainingRehearsals": "10",
+  "pulse": [10,7,4,6,7,8]
+},
+{
+  "name": "Chamber Orchestra",
+  "conductor": "Osmo Vanska",
+  "members": "20",
+  "remainingRehearsals": "7",
+  "pulse": [10,7,4,3,3,5]
+}]
