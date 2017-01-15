@@ -1,8 +1,10 @@
 'use strict';
 
-import { Input, Component, EventEmitter } from '@angular/core';
+import { Input, Output, Component, EventEmitter } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
+
+const links = require('./icon-nav.json');
 
 // providers below reflect component wide sharing
 @Component({
@@ -13,15 +15,26 @@ import { Router } from '@angular/router';
 
 export class IconNavComponent {
 
+	@Input() links: Array<Object> = links;
+//	@Output() navigate: Function;
+
 	constructor(
 		private DomSanitizer: DomSanitizer,
-		public router: Router
-	) {}
+		public router: Router,
+		public activatedRoute: ActivatedRoute
+	) {
+		
+
+	}
 
 	ngOnDestroy() {
 	}
 
 	ngOnInit() {
+  }
+
+  public navigate(dest) {
+	  this.router.navigate(['/' + dest]);
   }
 
 }

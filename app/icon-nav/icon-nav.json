@@ -1,0 +1,15 @@
+[{
+    "name": "Dashboard",
+    "route": "dashboard",
+    "icon": "icon-home"
+},
+{
+    "name": "Manager",
+    "route": "manager",
+    "icon": "icon-list"
+},
+{
+    "name": "Program",
+    "route": "program",
+    "icon": "icon-pencil"
+}]

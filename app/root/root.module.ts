@@ -11,15 +11,19 @@ import { EntityModule } from './../entity/entity.module';
 import { IconNavComponent } from './../icon-nav/icon-nav.component';
 import { ProgramModule } from './../program/program.module';
 import { ManageModule } from './../manage/manage.module';
+import { DashboardModule } from './../dashboard/dashboard.module';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
     imports: [
       FormsModule,
       HttpModule,
       BrowserModule,
+      CommonModule,
       EntityModule,
       ProgramModule,
       ManageModule,
+      DashboardModule,
       routing
     ],
     declarations: [
