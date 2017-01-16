@@ -17,5 +17,10 @@
     "name": "Personnel",
     "route": "personnel",
     "icon": "icon-user"
+},
+{
+    "name": "Auditions",
+    "route": "auditions",
+    "icon": "icon-mic"
 }
 ]

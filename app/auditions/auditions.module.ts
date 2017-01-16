@@ -1,12 +1,11 @@
 'use strict';
 
 import { NgModule } from '@angular/core';
-import { routing } from './program.routes';
+import { routing } from './auditions.routes';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { BrowserModule } from '@angular/platform-browser';
-import { ProgramComponent } from './program.component';
-import { EntityModule } from './../entity/entity.module';
+import { AuditionsComponent } from './auditions.component';
 import { CoreModule } from './../core/core.module';
 
 @NgModule({
@@ -14,14 +13,13 @@ import { CoreModule } from './../core/core.module';
       FormsModule,
       HttpModule,
       BrowserModule,
-      EntityModule,
       routing,
       CoreModule
     ],
     declarations: [
-      ProgramComponent
+      AuditionsComponent
     ],
-    bootstrap: [ProgramComponent]
+    bootstrap: [AuditionsComponent]
 })
 
-export class ProgramModule {};
+export class AuditionsModule {};

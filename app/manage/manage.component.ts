@@ -9,6 +9,8 @@ import { Input, Component, EventEmitter } from '@angular/core';
 
 export class ManageComponent {
 
+	public data = require('./manage.json');
+	
 	constructor(
 	) {}
 

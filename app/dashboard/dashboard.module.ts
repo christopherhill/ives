@@ -10,6 +10,7 @@ import { EnsemblesComponent } from './ensembles/ensembles.component';
 import { TabsModule } from 'ng2-bootstrap';
 import { PulseComponent } from './pulse/pulse.component';
 import { ChartsModule } from 'ng2-charts/components/charts/charts'; //ng2-charts';
+import { CoreModule } from './../core/core.module';
 
 @NgModule({
     imports: [
@@ -18,12 +19,13 @@ import { ChartsModule } from 'ng2-charts/components/charts/charts'; //ng2-charts
       BrowserModule,
       routing,
       TabsModule.forRoot(),
-      ChartsModule
+      ChartsModule,
+      CoreModule
     ],
     declarations: [
       DashboardComponent,
       PulseComponent,
-      EnsemblesComponent
+      EnsemblesComponent,
     ],
     bootstrap: [DashboardComponent]
 })

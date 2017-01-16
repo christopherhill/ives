@@ -1,77 +1,76 @@
-      <br>
-      <h2>2016-2017 Season</h2>
-      <table class="table">
-        <thead>
-          <th>Program Title</th>
-          <th>Date</th>
-          <th>Ensemble</th>
-          <th>...</th>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Beethoven Concert</td>
-            <td>April 1, 2017</td>
-            <td>University Orchestra</td>
-            <td>
-              <div class="dropdown">
-                <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Actions
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                  <a class="dropdown-item" href="#">Email...</a>
-                  <a class="dropdown-item" href="programs.html">Program Manager...</a>
-                  <a class="dropdown-item" href="#">Rehearsal Schedule...</a>
-                  <a class="dropdown-item" href="#">Personnel Assignments...</a>
-                  <a class="dropdown-item" href="#">Share and Promote...</a>
-                </div>
-              <button class="btn btn-danger">Delete</button>
-              </div>
-            </td>
-          </tr>
-          <tr>
-            <td>Brahms Concert</td>
-            <td>June 1, 2017</td>
-            <td>University Orchestra</td>
-               <td>
-              <div class="dropdown">
-                <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Actions
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                  <a class="dropdown-item" href="#">Email...</a>
-                  <a class="dropdown-item" href="programs.html">Program Manager...</a>
-                  <a class="dropdown-item" href="#">Rehearsal Schedule...</a>
-                  <a class="dropdown-item" href="#">Personnel Assignments...</a>
-                  <a class="dropdown-item" href="#">Share and Promote...</a>
-                </div>
-                <button class="btn btn-danger">Delete</button>
-              </div>
-            </td>
-          </tr>
-           <tr>
-            <td>Brahms Concert</td>
-            <td>June 1, 2017</td>
-            <td>Chamber Orchestra</td>
-                <td>
-              <div class="dropdown">
-                <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Actions
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                  <a class="dropdown-item" href="#">Email...</a>
-                  <a class="dropdown-item" href="programs.html">Program Manager...</a>
-                  <a class="dropdown-item" href="#">Rehearsal Schedule...</a>
-                  <a class="dropdown-item" href="#">Personnel Assignments...</a>
-                  <a class="dropdown-item" href="#">Share and Promote...</a>
-                </div>
-                <button class="btn btn-danger">Delete</button>
+<header-title [title]="'Season at a Glance'" [subTitle]="'Ives'"></header-title>
+<br>
+<table class="table">
+  <thead>
+    <th>Program Title</th>
+    <th>Date</th>
+    <th>Ensemble</th>
+    <th>...</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let concert of data">
+      <td>{{concert.title}}</td>
+      <td>{{concert.date}}</td>
+      <td>{{concert.ensemble}}</td>
+      <td>
+        <div class="dropdown">
+          <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Actions
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#">Email...</a>
+            <a class="dropdown-item" href="programs.html">Program Manager...</a>
+            <a class="dropdown-item" href="#">Rehearsal Schedule...</a>
+            <a class="dropdown-item" href="#">Personnel Assignments...</a>
+            <a class="dropdown-item" href="#">Share and Promote...</a>
+          </div>
+        <button class="btn btn-danger">Delete</button>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>Brahms Concert</td>
+      <td>June 1, 2017</td>
+      <td>University Orchestra</td>
+          <td>
+        <div class="dropdown">
+          <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Actions
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#">Email...</a>
+            <a class="dropdown-item" href="programs.html">Program Manager...</a>
+            <a class="dropdown-item" href="#">Rehearsal Schedule...</a>
+            <a class="dropdown-item" href="#">Personnel Assignments...</a>
+            <a class="dropdown-item" href="#">Share and Promote...</a>
+          </div>
+          <button class="btn btn-danger">Delete</button>
+        </div>
+      </td>
+    </tr>
+      <tr>
+      <td>Brahms Concert</td>
+      <td>June 1, 2017</td>
+      <td>Chamber Orchestra</td>
+          <td>
+        <div class="dropdown">
+          <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Actions
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#">Email...</a>
+            <a class="dropdown-item" href="programs.html">Program Manager...</a>
+            <a class="dropdown-item" href="#">Rehearsal Schedule...</a>
+            <a class="dropdown-item" href="#">Personnel Assignments...</a>
+            <a class="dropdown-item" href="#">Share and Promote...</a>
+          </div>
+          <button class="btn btn-danger">Delete</button>
 
-              </div>
-            </td>
-          </tr>
-          <tr>
-            <td><button class="btn btn-primary">+ Add a new performance in this series</button></td>
-          </tr>
-        </tbody>
-      </table>
-      
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td><button class="btn btn-primary">+ Add a new performance in this series</button></td>
+    </tr>
+  </tbody>
+</table>

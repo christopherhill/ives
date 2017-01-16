@@ -6,13 +6,15 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { PersonnelComponent } from './personnel.component';
+import { CoreModule } from './../core/core.module';
 
 @NgModule({
     imports: [
       FormsModule,
       HttpModule,
       BrowserModule,
-      routing
+      routing,
+      CoreModule
     ],
     declarations: [
       PersonnelComponent

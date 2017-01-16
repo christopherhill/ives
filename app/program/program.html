@@ -1,9 +1,5 @@
-    <div class="dashhead">
-      <div class="dashhead-titles">
-        <h6 class="dashhead-subtitle">Ives</h6>
-        <h3 class="dashhead-title">Program Editor</h3>
-      </div>
-    </div>
+    <header-title [title]="'Program Editor'" [subTitle]="'Ives'"></header-title>
+
 
     <br>
       <div class="alert alert-info" role="alert">
@@ -90,3 +86,4 @@
         </table>
 
         <button class="btn btn-lg btn-primary">Print Program...</button>
+        <button (click)="venueSearch()" class="btn btn-lg btn-danger">Venue Search...</button>
