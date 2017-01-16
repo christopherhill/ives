@@ -1,7 +1,7 @@
 'use strict';
 
 import { NgModule } from '@angular/core';
-import { HttpModule } from '@angular/http';
+import { HttpModule, XHRBackend, RequestOptions } from '@angular/http';
 import { APIHttpService } from './api-http.service';
 
 @NgModule({
@@ -9,8 +9,12 @@ import { APIHttpService } from './api-http.service';
       HttpModule
     ],
     providers: [
-      APIHttpService
-    ]
+      { provide: APIHttpService, 
+        useFactory: (backend: XHRBackend, defaultOptions: RequestOptions) => {
+          return new APIHttpService(backend, defaultOptions);
+        },
+        deps: [XHRBackend, RequestOptions]   
+    }]
 })
 
 export class APIModule {};

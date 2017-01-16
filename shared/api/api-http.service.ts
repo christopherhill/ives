@@ -16,13 +16,13 @@ export class APIHttpService extends Http {
     this.channel = Rxmq.channel('http');
   }
 
-  request(url: string | Request, options?: RequestOptionsArgs): Observable<Response> {
-    console.log('request...');
-    this.channel.subject('request').next({ progress: true });
-    return super.request(url, options).catch(res => {
-      return this.channel.subject('request').next({ progress: false });
-    });
-  }
+  // request(url: string | Request, options?: RequestOptionsArgs): Observable<Response> {
+  //   console.log('request...');
+  //   this.channel.subject('request').next({ progress: true });
+  //   return super.request(url, options).catch(res => {
+  //     return this.channel.subject('request').next({ progress: false });
+  //   });
+  // }
 
   get(url: string, options?: RequestOptionsArgs): Observable<Response> {
     console.log('get...');
